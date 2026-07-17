@@ -1,0 +1,99 @@
+body {
+  background-color: #f4eff2; /* Soft pale pink/grey background */
+  font-family: "Courier New", Courier, monospace; /* Classic indie typography */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(135deg, #f5eff2 25%, #e9e1e7 100%);
+}
+.game-container {
+  width: 420px;
+  position: relative;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #a3939b;
+  padding-bottom: 10px;
+}
+h1 {
+  color: #4a3e43;
+  font-size: 38px;
+  font-weight: normal;
+  margin: 0;
+  letter-spacing: -1px;
+}
+h1 span {
+  font-size: 18px;
+  color: #a3939b;
+  font-style: italic;
+}
+.score-container {
+  background: #4a3e43;
+  padding: 6px 12px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 20px; /* Pill shape */
+}
+.grid {
+  background: #dbd0d6; /* Soft muted grid base */
+  width: 420px;
+  height: 420px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 12px;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+.tile {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px; /* Smaller text size fits the word strings */
+  font-weight: bold;
+  text-transform: lowercase;
+  letter-spacing: -0.5px;
+  transition: all 0.1s ease-in-out;
+}
+
+/* 2016 Tumblr Palette Tiers */
+.tile-2 { background: #fce4ec; color: #c2185b; }     /* Pale Rose */
+.tile-4 { background: #f8bbd0; color: #ad1457; }     /* Soft Pink */
+.tile-8 { background: #e1bee7; color: #6a1b9a; }     /* Pale Lavender */
+.tile-16 { background: #d1c4e9; color: #4527a0; }    /* Pastel Purple */
+.tile-32 { background: #bbdefb; color: #1565c0; }    /* Muted Blue */
+.tile-64 { background: #b2dfdb; color: #00695c; }    /* Soft Mint */
+.tile-128 { background: #cfd8dc; color: #37474f; }   /* Grid Grey */
+.tile-256 { background: #ffe0b2; color: #ef6c00; }   /* Pale Peach */
+.tile-512 { background: #ffcc80; color: #d84315; }   /* Deep Coral */
+.tile-1024 { background: #b0bec5; color: #212121; }  /* Dark Mono */
+.tile-2048 { 
+  background: linear-gradient(45deg, #ffdeed, #efdaff, #dbf3ff); /* Holographic vaporwave finish */
+  color: #4a3e43; 
+  box-shadow: 0 0 15px rgba(255,222,237,0.6);
+}
+
+.game-over {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(244, 239, 242, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game-over p { font-size: 32px; color: #4a3e43; margin-bottom: 20px; font-style: italic; }
+.game-over button {
+  background: #4a3e43; color: white; border: none;
+  padding: 10px 20px; border-radius: 20px; cursor: pointer;
+  font-family: inherit; font-size: 14px;
+}
+.hidden { display: none !important; }
