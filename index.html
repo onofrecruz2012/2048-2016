@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048 // 2016 edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <h1>2048 <span>// 2016</span></h1>
+      <div class="score-container">Score: <span id="score">0</span></div>
+    </div>
+    <div id="grid" class="grid"></div>
+    <div id="game-over" class="game-over hidden">
+      <p>Game Over.</p>
+      <button onclick="resetGame()">Try Again</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
